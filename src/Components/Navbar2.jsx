@@ -2,30 +2,28 @@
 import logo from "../assets/mudar.png"
 import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+function Navbar2() {
   const navigate = useNavigate(); // Initialize useNavigate hook
 
-  const handleRegisterClick = () => {
-    navigate("/register"); // Navigate to the /register route
-  };
   const handleHomeClick = () => {
     navigate("/"); // Navigate to the /register route
   };
   const handleAboutClick = () => {
     navigate("/about"); // Navigate to the /register route
   };
-  const handleLogintClick = () => {
-    navigate("/login"); // Navigate to the /register route
-  };
+ 
   const handleContactClick = () => {
     navigate("/contact"); // Navigate to the /register route
+  };
+  const handleSettingClick = () => {
+    navigate("/settings"); // Navigate to the /register route
   };
   return (
   <header className=" bg-[#181818]">
   <nav className="mx-auto flex  items-center justify-between  lg:px-8" aria-label="Global">
     <div className="flex lg:flex-1">
       
-        <img className=" w-auto py-4" src={logo} alt />
+        <img className="w-40 py-5" src={logo} alt />
    
     </div>
     <div className="flex lg:hidden">
@@ -43,17 +41,17 @@ function Navbar() {
       <a href="#" onClick={handleAboutClick} className=" font-semibold">About</a>
       <a href="#" onClick={handleContactClick} className=" font-semibold">Contact</a>
     </div>
-    <div className="hidden lg:flex lg:flex-1 lg:justify-end text-white">
+    <div className="hidden lg:flex lg:flex-1 lg:justify-end text-white ">
      
       <button
-       onClick={handleLogintClick} className="px-4 py-2 text-white font-semibold rounded-full">
-           Sign in
+       onClick={handleSettingClick} className="px-5 py-2 bg-blue-600 text-white font-semibold rounded-full">
+           Settings
           </button>
           <button
-        onClick={handleRegisterClick}
-        className="px-4 py-2 bg-blue-600 text-black font-semibold rounded-full hover:bg-blue-700 transition duration-200"
+        onClick={handleHomeClick}
+        className="px-5 ml-3 py-2 bg-red-500 text-white font-semibold rounded-full hover:bg-red-700 transition duration-200"
       >
-        Register
+        Logut
       </button>
      
     </div>
@@ -67,4 +65,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Navbar2

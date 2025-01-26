@@ -1,4 +1,4 @@
-import t1 from "../assets/Logo (1).png"
+import t1 from "../assets/mudar.png"
 
 function Footer() {
   return (
@@ -7,8 +7,8 @@ function Footer() {
 
     <nav className="text-[18px] text-[#F4E9CD] pl-40   ">
       <img src={t1} alt="" />
-      <h1 className="pl-5 ">Copyrights @ 2025 BuzNest </h1>
-      <h1 className="pl-12 ">All rights reserved. </h1>
+      <h1 className="pl-2 mt-2">Copyrights @ 2025 Mudar </h1>
+      <h1 className="pl-10 ">All rights reserved. </h1>
     </nav>
       <nav >
       <h6 className="footer-title">Company</h6>

@@ -1,14 +1,23 @@
 
 import { UserGroupIcon ,HomeIcon , TruckIcon ,LockClosedIcon,CheckBadgeIcon,DocumentTextIcon} from "@heroicons/react/24/outline";
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+ import { useNavigate } from "react-router-dom";
 
 function Home() {
+
+   const navigate = useNavigate();
+   const handlePriceClick = () => {
+    navigate("/checkout"); // Navigate to the /register route
+  };
+   const handleContactClick = () => {
+    navigate("/contact"); // Navigate to the /register route
+  };
   return (
-    <div className="font-poppins">
+    <div className="font-poppins ">
         <div className=" bg-black pt-20 px-40 ">
             <h3 className=" text-[#7B7B7B]  text-[20px]">The ultimate solution for business success</h3>
             <h1 className="text-[50px] text-white ">{`"Tired of juggling tools? Streamline everything with a device built for your business."`}</h1>
-            <button className="btn btn-active bg-[#74ACFF] px-12 ml-[550px] my-11 ">Explore</button>
+            <a href="#tas" className="btn btn-active bg-[#74ACFF] px-12 ml-[550px] my-11 ">Explore</a>
         </div>
         <div className="bg-[#181818] border-[#115AC7] border-[8px] border-t-[0] p-10">
             <h1 className="text-[#1055BC;] font-[700] text-[40px]" > Features That Matter</h1>
@@ -38,9 +47,9 @@ function Home() {
 
         </div> {/*storage */}
 
-      <div className="bg-black dark:bg-gray-900 font-poppins">
+      <div id="tas" className="bg-black dark:bg-gray-900 font-poppins ">
   <div className="container  py-8 mx-auto">
-    <h1 className="text-white text-left text-[25px]">PRICING</h1>
+    <h1 className="text-white text-center text-[25px]">PRICING</h1>
     <h1 className="text-white text-[40px] text-center leading-tight "><span className="text-blue-700 font-bold">O</span>ptimize Your Business <br />
     with the Right Plan:</h1>
 
@@ -61,7 +70,7 @@ function Home() {
           </span>
           <h6>Annual Subscription</h6>
         </div>
-         <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none">
+         <button onClick={handlePriceClick} className="inline-flex items-center justify-center px-4 py-2 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none">
          Get Price Estimate
         </button>
         <ul className="flex-1 space-y-4 text-black text-[15px]">
@@ -105,7 +114,7 @@ function Home() {
           </span>
           <h6>Setup Cost</h6>
         </div>
-         <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white transition-colors bg-green-500 rounded-lg hover:bg-green-700 focus:outline-none">
+         <button onClick={handlePriceClick} className="inline-flex items-center justify-center px-4 py-2 font-medium text-white transition-colors bg-green-500 rounded-lg hover:bg-green-700 focus:outline-none">
          Get Price Estimate
         </button>
         <ul className="flex-1 space-y-4 text-white text-[15px]">
@@ -153,7 +162,7 @@ function Home() {
           </span>
           <h6>Annual Subscription</h6>
         </div>
-         <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none">
+         <button onClick={handlePriceClick} className="inline-flex items-center justify-center px-4 py-2 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none">
          Get Price Estimate
         </button>
         <ul className="flex-1 space-y-4 text-black text-[15px]">
@@ -197,7 +206,7 @@ function Home() {
           </span>
           <h6>Annual Subscription</h6>
         </div>
-         <button className="inline-flex items-center justify-center px-5 py-2 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none">
+         <button onClick={handlePriceClick} className="inline-flex items-center justify-center px-5 py-2 font-medium text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none">
          Get Price Estimate
         </button>
         <ul className="flex-1 space-y-4 text-black text-[15px]">
@@ -264,7 +273,7 @@ function Home() {
       <SupportAgentIcon  className=" !w-12 !h-12 mx-auto " />
     <h2 className=" text-center font-bold text-[25px]">Looking For Support?</h2>
     <div className="card-actions justify-end">
-      <button className="btn btn-ghost text-gray-600 text-[16px]">Contact us <span className="text-[16px] pt-1">{`>`}</span> </button>
+      <button onClick={handleContactClick} className="btn btn-ghost text-gray-600 text-[16px]">Contact us <span className="text-[16px] pt-1">{`>`}</span> </button>
     </div>
   </div>
   
